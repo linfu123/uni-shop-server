@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.unishop.server.dao.ImageUrlDao">
+
+    <resultMap id="imageUrlData" type="com.unishop.server.entities.ImageUrl">
+        <id property="id" column="id"/>
+        <result property="imgUrl" column="imgUrl"/>
+        <result property="type" column="type_m" />
+
+    </resultMap>
+    <select id="findAll" resultMap="imageUrlData">
+        select * from tb_images
+    </select>
+</mapper>
